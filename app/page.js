@@ -81,7 +81,7 @@ const page = () => {
                 
                 <div className={`flex flex-col justify-end gap-6 p-10 w-full min-h-[70vh] md:min-h-fit border border-neutral-600 rounded-[30px] bg-[#cccccc] relative overflow-hidden`}>
                     <div className="text-4xl font-[300] text-black z-20">Let's build<br/>something great</div>
-                    <div className="font-[300] text-black w-full md:w-2/3 z-20">Interested in starting your own website project with me? Excellent! I'd love to talk to you about your idea.</div>
+                    <div className="font-[300] text-black w-full md:w-2/3 z-20">Interested in starting your own website project with me? Excellent! I&apos;d love to talk to you about your idea.</div>
                     <button className="text-black rounded-[30px] border border-neutral-600 px-4 py-2 w-fit">Get in Touch</button>
                     <div className="absolute right-[-250px] z-10 w-[50vh] h-[80vh] blur-xl bg-blue-600 opacity-70 rotate-[-30deg] rounded-full"></div>
                     <div className="absolute right-[-50px] w-[40vh] h-[80vh] blur-xl bg-blue-300 opacity-60 rotate-[-90deg] rounded-full"></div>
@@ -126,7 +126,7 @@ const page = () => {
                             <span className="font-[300] text-neutral-700">Mar 2024 - Jul 2024</span>
                             <div className="flex flex-col text-neutral-800">
                                 <span>&bull; Introduced tailwind to the AulaEdge website for cross-device responsiveness.</span>
-                                <span>&bull; Improved Classroom setup by working on 'optional subjects', where individual students could be assigned to specific subjects.</span>
+                                <span>&bull; Improved Classroom setup by working on &apos;optional subjects&apos;, where individual students could be assigned to specific subjects.</span>
                                 <span>&bull; Worked on WhatApp messaging module for school notifications.</span>
                                 <span>&bull; Worked on Lesson Plans and Assignments feature for Curriculum Design.</span>
                             </div>
