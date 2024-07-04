@@ -91,7 +91,7 @@ const page = () => {
                     <div>I dived into web dev and started developing websites from 2022, after that there was no stopping. I&apos;d worked for multiple startups, NGOs and big organizations and also done a lot of freelance.</div>
                     <div>I enjoy learning new tools, tech, and methods to make my development the best it can be.</div>
 
-                    <Image src={dp3} alt="CodeLab Image" className="rounded-[10px] max-w-[70vh] md:max-w-[100vh] h-auto border border-neutral-600 absolute left-[40px] bottom-[-300px] sm:bottom-[-200px] md:bottom-[-450px] lg:bottom-[-350px]"/>
+                    <Image src={dp1} alt="CodeLab Image" className="rounded-[10px] max-w-[50vh] sm:max-w-[90vh] md:max-w-[100vh] h-auto border border-neutral-600 relative"/>
                 </div>
                 {/* about */}
                 <div className={`rounded-[30px] border border-neutral-600 flex flex-col items-start justify-end gap-5 p-10 bg-gradient-to-b from-neutral-800 to-black min-h-[40vh] md:min-h-fit md:w-full`}>
