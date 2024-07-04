@@ -1,0 +1,38 @@
+"use client";
+import { useEffect, useRef } from "react";
+import { GoHomeFill, GoPersonFill } from "react-icons/go";
+import { TbAppsFilled } from "react-icons/tb";
+import { PiStackFill } from "react-icons/pi";
+import { MdMail } from "react-icons/md";
+import useHover from "@/hooks/useHover";
+import useWindowWidth from "@/hooks/useWindowWidth";
+
+const Button = ({icon,text})=>{
+    const ref = useRef(null);
+    const hovered = useHover(ref);
+    const {isMobile} = useWindowWidth();
+    return (
+        <div ref={ref} className="flex items-center justify-center gap-2 cursor-pointer">
+            <div className="text-2xl sm:text-3xl md:text-4xl rounded-[30px] flex flex-col items-center justify-center hover:scale-125 transition-all duration-200">
+                {icon}
+            </div>
+            <div className={`${hovered && !isMobile ? "w-16" : "w-0 overflow-hidden"} transition-all duration-200`}>{text}</div>
+        </div>
+    )
+}
+
+const Nav = () => {
+    return (
+        <div className="fixed bottom-10 left-0 w-full flex items-center justify-center">
+            <div className="rounded-[30px] bg-gradient-to-b from-neutral-500/50 to-neutral-600/60 w-fit px-5 py-3 flex items-center justify-center gap-3">
+                <Button icon={<GoHomeFill/>} text="Home" />
+                <Button icon={<GoPersonFill/>} text="Profile"/>
+                <Button icon={<TbAppsFilled/>} text="Projects"/>
+                <Button icon={<PiStackFill/>} text="Stack"/>
+                <Button icon={<MdMail/>} text="Contact"/>
+            </div>
+        </div>
+    );
+};
+
+export default Nav;
