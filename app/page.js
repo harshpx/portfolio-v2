@@ -1,8 +1,15 @@
 "use client";
 import React,{useState, useEffect} from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { FaArrowTrendUp } from "react-icons/fa6";
+import { IoMdMailUnread } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
+import { RiInstagramFill } from "react-icons/ri";
+
 import Nav from "@/components/Nav";
+import Crousel from "@/components/Crousel";
+
 import codelab1 from "@/assets/codelab1.png";
 import dp1 from "@/assets/dp1.jpeg";
 import dp2 from "@/assets/dp2.jpg";
@@ -18,24 +25,11 @@ import aoc from "@/assets/aoc.png";
 import weather from "@/assets/weather.png";
 import dashboard from "@/assets/dashboard.png";
 import comments from "@/assets/comments.png";
+import rentify from "@/assets/rentify.png";
 import miniBlog from "@/assets/miniBlog.png";
 import tealfox from "@/assets/tealfox.png";
 import virtualAssistantReferee from "@/assets/var.png";
-
 const page = () => {
-    // const [isMobile, setIsMobile] = useState(false);
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //       setIsMobile(window.innerWidth < 768);
-    //     };
-    //     handleResize();
-    //     window.addEventListener('resize', handleResize);
-    //     return () => window.removeEventListener('resize', handleResize);
-    // }, []);
-
-    // useEffect(() => {
-    //     console.log(isMobile);
-    // }, [isMobile]);
 
     const redirect = (url) => {
         window.open(url, "_blank");
@@ -44,7 +38,7 @@ const page = () => {
     return (
         <div className="min-h-screen min-w-full bg-black text-white p-2 flex flex-col gap-2">
             {/* 1. Home */}
-            <div className={`w-full md:h-[95vh] grid gap-2 grid-cols-1 md:grid-cols-2`}>
+            <div id="home" className={`w-full md:h-[95vh] grid gap-2 grid-cols-1 md:grid-cols-2`}>
                 {/* 1st card: intro */}
                 <div className={`rounded-[30px] border border-neutral-600 flex flex-col items-start justify-end gap-5 p-10 bg-gradient-to-b from-neutral-800 to-black min-h-[40vh] md:min-h-fit md:w-full`}>
                     <div className="w-full text-xl">Harsh Priye</div>
@@ -56,8 +50,14 @@ const page = () => {
                     <div className="text-md">Latest Project</div>
                     <div className="text-4xl font-[300]">CodeLab</div>
                     <div>Codelab is an online code compiler that is specifically designed for competitive programmers.</div>
-                    <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                    <Image src={codelab1} alt="CodeLab Image" className="rounded-[20px] max-w-[100vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
+                    <div className="flex items-center justify-start gap-2">
+                        <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button className="flex items-center justify-center flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">
+                            <Link href="#projects" className="w-full">View Projects</Link>
+                            <div className=""><FaArrowTrendUp size={20}/></div>
+                        </button>
+                    </div>
+                    <Image src={codelab1} priority alt="CodeLab Image" className="rounded-[20px] max-w-[100vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
                 {/* 3rd card: insights */}
                 <div className={`grid gap-2 min-h-[70vh] grid-cols-1 md:grid-cols-2 md:w-full md:min-h-fit`}>
@@ -74,14 +74,17 @@ const page = () => {
                         <div className="w-full mb-10">Services</div>
                         <div className="flex flex-col items-start gap-8">
                             <span className="font-[300]">From UI/UX<br/>to Full Stack Web Apps, Backend Design and ML integration,<br/>I have services to offer everyone.</span>
-                            <button className="rounded-[30px] border border-neutral-600 px-4 py-2">View Services</button>
+                            <button className="flex items-center justify-center flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">
+                                <span className="w-full">View Services</span>
+                                <FaArrowTrendUp size={20}/>
+                            </button>
                         </div>
                         <div className="sphere"/>
                     </div>
                 </div>
             </div>
             {/* 2. About */}
-            <div className={`w-full grid grid-cols-1 gap-2 md:h-[95vh] md:grid-cols-2`}>
+            <div id="about" className={`w-full grid grid-cols-1 gap-2 md:h-[95vh] md:grid-cols-2`}>
                 {/* my journey */}
                 <div className={`rounded-[30px] border border-neutral-600 h-[80vh] md:h-full md:w-full md:row-span-2 relative overflow-hidden flex flex-col gap-7 p-10`}>
                     <div className="text-4xl font-[300]">My Journey so far</div>
@@ -99,13 +102,20 @@ const page = () => {
                 <div className={`flex flex-col justify-end gap-6 p-10 w-full min-h-[70vh] md:min-h-fit border border-neutral-600 rounded-[30px] bg-[#cccccc] relative overflow-hidden`}>
                     <div className="text-4xl font-[300] text-black z-20">Let&apos;s build<br/>something great</div>
                     <div className="font-[300] text-black w-full md:w-2/3 z-20">Interested in starting your own website project with me? Excellent! I&apos;d love to talk to you about your idea.</div>
-                    <button className="text-black rounded-[30px] border border-neutral-600 px-4 py-2 w-fit">Get in Touch</button>
+                    <button className="text-black hover:text-white hover:bg-black rounded-[30px] border border-neutral-600 px-4 py-2 w-fit transition-all duration-300">
+                        <Link href='#contact' className="w-full">Get in Touch</Link>
+                    </button>
                     <div className="absolute right-[-250px] z-10 w-[50vh] h-[80vh] blur-xl bg-blue-600 opacity-70 rotate-[-30deg] rounded-full"></div>
                     <div className="absolute right-[-50px] w-[40vh] h-[80vh] blur-xl bg-blue-300 opacity-60 rotate-[-90deg] rounded-full"></div>
                 </div>
             </div>
+            {/* tech stack */}
+            <div id="stack" className="flex flex-col items-center justify-start p-10 gap-5 w-full min-h-[40vh] rounded-[30px] border border-neutral-600 bg-gradient-to-b from-neutral-800 to-black">
+                <h1 className="text-4xl font-[300]">My Tech Stack</h1>
+                <Crousel/>
+            </div>
             {/* 3. education & experience */}
-            <div className="w-full grid gap-2 grid-cols-1 md:grid-cols-2 min-h-[60vh]">
+            <div id="experience" className="w-full grid gap-2 grid-cols-1 md:grid-cols-2 min-h-[60vh]">
                 {/* experience */}
                 <div className=" order-last md:order-first rounded-[30px] border border-neutral-600 p-10 h-full flex flex-col items-start gap-10 bg-[#cccccc] text-black relative overflow-hidden">
                     <div className="absolute right-[-350px] md:right-[-250px] top-[-400px] z-10 w-[50vh] h-[80vh] blur-xl bg-blue-600 opacity-70 rotate-[-15deg] md:rotate-[-30deg] rounded-full"/>
@@ -225,7 +235,7 @@ const page = () => {
                 </div>
             </div>
             {/* 3. projects */}
-            <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div id="projects" className="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div className="flex flex-col items-start justify-end gap-6 p-10 rounded-[30px] border border-neutral-600 md:col-span-2 bg-gradient-to-b from-neutral-800 to-black md:min-h-[40vh]">
                     <span className="text-4xl font-[300]">Projects</span>
                     <span className="font-[300]">My work has crossed many sectors.<br/>I&apos;ve built websites for startups, household names, as well as a number of personal projects.<br/>Always with a focus on reliability and efficiency.</span>
@@ -255,9 +265,9 @@ const page = () => {
                             <span className="font-[300]">&bull; OAuth</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/CodeLab')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    <div className="flex items-center gap-2">
+                        <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/CodeLab')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={codelab1} alt="CodeLab Image" className="rounded-[20px] max-w-[100vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -280,9 +290,9 @@ const page = () => {
                             <span className="font-[300]">&bull; Tailwind CSS</span>
                         </div>
                     </div>
-                    {/* <div className="flex items-center gap-4">
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    {/* <div className="flex items-center gap-2">
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div> */}
                     <Image src={portfolio1} alt="portfolio Image" className="rounded-[20px] max-w-[150vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -308,9 +318,9 @@ const page = () => {
                             <span className="font-[300]">&bull; Websockets</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <button onClick={()=>redirect('https://mini-tic-tac-toe.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/tic-tac-toe-socket')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    <div className="flex items-center gap-2">
+                        <button onClick={()=>redirect('https://mini-tic-tac-toe.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/tic-tac-toe-socket')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={ticTacToe} alt="TicTacToe Image" className="rounded-[20px] max-w-[90vh] lg:max-w-[100vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -337,9 +347,9 @@ const page = () => {
                             <span className="font-[300]">&bull; MongoDB</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <button onClick={()=>redirect('https://memoize-notes.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/memoize')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    <div className="flex items-center gap-2">
+                        <button onClick={()=>redirect('https://memoize-notes.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/memoize')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={memoize1} alt="Memoize Image" className="rounded-[20px] max-w-[120vh] lg:max-w-[150vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -364,9 +374,9 @@ const page = () => {
                             <span className="font-[300]">&bull; Github</span>
                         </div>
                     </div>
-                    {/* <div className="flex items-center gap-4">
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    {/* <div className="flex items-center gap-2">
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div> */}
                     <Image src={aulacube} alt="Aulacube Image" className="rounded-[20px] max-w-[90vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -392,9 +402,9 @@ const page = () => {
                             <span className="font-[300]">&bull; Jira</span>
                         </div>
                     </div>
-                    {/* <div className="flex items-center gap-4">
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    {/* <div className="flex items-center gap-2">
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div> */}
                     <Image src={aoc} alt="AOC Image" className="rounded-[20px] max-w-[90vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -405,7 +415,7 @@ const page = () => {
                         <div className="text-neutral-300">College Major Project &bull; Deep Learning &bull; Web Dev &bull; Full-Stack</div>
                     </div>
                     <div className="flex items-center gap-2">
-                        <span className="">&bull; Not Deployed</span>
+                        <span className="text-neutral-500">&bull; Not Deployed</span>
                         {/* <span className="text-green-500">&bull; Active</span> */}
                     </div>
                     <div className="text-neutral-300 w-full">A Full-Stack Deepfake Detection App, developed using TensorFlow, FastAPI and React.js</div>
@@ -422,9 +432,9 @@ const page = () => {
                             <span className="font-[300]">&bull; Tailwind CSS</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button> */}
-                        <button onClick={()=>redirect('https://github.com/harshpx/deepfake-detection')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    <div className="flex items-center gap-2">
+                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button> */}
+                        <button onClick={()=>redirect('https://github.com/harshpx/deepfake-detection')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={deepfake1} alt="Deepfake Image" className="rounded-[20px] max-w-[85vh] md:max-w-[80vh] lg:max-w-[95vh] xl:max-w-[100vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -451,9 +461,9 @@ const page = () => {
                             <span className="font-[300]">&bull; Tailwind CSS</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <button onClick={()=>redirect('https://dog-breed-identifier-client.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/Dog-Breed-Identifier-client')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    <div className="flex items-center gap-2">
+                        <button onClick={()=>redirect('https://dog-breed-identifier-client.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/Dog-Breed-Identifier-client')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={dogBreed1} alt="DogBreed Image" className="rounded-[20px] max-w-[90vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -479,9 +489,9 @@ const page = () => {
                             <span className="font-[300]">&bull; OpenWeather API</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <button onClick={()=>redirect('https://weather-harshpx.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/weather')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    <div className="flex items-center gap-2">
+                        <button onClick={()=>redirect('https://weather-harshpx.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/weather')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={weather} alt="Weather Image" className="rounded-[20px] max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -506,36 +516,39 @@ const page = () => {
                             <span className="font-[300]">&bull; Chart.js</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <button onClick={()=>redirect('https://dashboard-harshpx.vercel.app')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/dashboard')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    <div className="flex items-center gap-2">
+                        <button onClick={()=>redirect('https://dashboard-harshpx.vercel.app')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/dashboard')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={dashboard} alt="Dashboard Image" className="rounded-[20px] max-w-[110vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
-                {/* comment box */}
+                {/* Rentify */}
                 <div className="flex flex-col gap-5 p-10 rounded-[30px] border border-neutral-600 h-[800px] relative overflow-hidden">
                     <div className="flex flex-col items-start gap-1">
-                        <div className="text-4xl font-[300]">Comment Box</div>
-                        <div className="text-neutral-300">Freelance Project &bull; Web Dev &bull; Frontend</div>
+                        <div className="text-4xl font-[300]">Rentify</div>
+                        <div className="text-neutral-300">Freelance Project &bull; Web Dev &bull; Full-Stack</div>
                     </div>
                     <div className="flex items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-green-500">&bull; Active</span>
                     </div>
-                    <div className="text-neutral-300 w-full">A three-level, Reusable comment section component made using React JS and Tailwind CSS.</div>
+                    <div className="text-neutral-300 w-full">Rentify is a marketplace for people in search for houses for rent in major indian cities.</div>
                     <div className="flex flex-col items-start justify-start gap-0 w-full">
                         <span>Tech Stack:</span>
                         <div className="flex flex-wrap w-full items-center gap-x-3">
                             <span className="font-[300]">&bull; React.js</span>
                             <span className="font-[300]">&bull; JavaScript</span>
                             <span className="font-[300]">&bull; Tailwind CSS</span>
+                            <span className="font-[300]">&bull; Node.js</span>
+                            <span className="font-[300]">&bull; Express.js</span>
+                            <span className="font-[300]">&bull; MongoDB</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <button onClick={()=>redirect('https://commentbox.vercel.app')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/comments-project')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    <div className="flex items-center gap-2">
+                        <button onClick={()=>redirect('https://rentify-harshpx.vercel.app')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/Rentify')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
-                    <Image src={comments} alt="CommentBox Image" className="rounded-[20px] max-w-[45vh] sm:max-w-[70vh] md:max-w-[55vh] lg:max-w-[70vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
+                    <Image src={rentify} alt="Rentify Image" className="rounded-[20px] max-w-[110vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
                 {/* miniblog */}
                 <div className="flex flex-col gap-5 p-10 rounded-[30px] border border-neutral-600 h-[800px] relative overflow-hidden">
@@ -560,9 +573,9 @@ const page = () => {
                             <span className="font-[300]">&bull; Appwrite</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        <button onClick={()=>redirect('https://miniblogger.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/miniBlog')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    <div className="flex items-center gap-2">
+                        <button onClick={()=>redirect('https://miniblogger.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/miniBlog')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={miniBlog} alt="moniBlog Image" className="rounded-[20px] max-w-[110vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -583,9 +596,9 @@ const page = () => {
                             <span className="font-[300]">&bull; Firefox</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button> */}
-                        <button onClick={()=>redirect('https://github.com/harshpx/TealFox')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    <div className="flex items-center gap-2">
+                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button> */}
+                        <button onClick={()=>redirect('https://github.com/harshpx/TealFox')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={tealfox} alt="Tealfox Image" className="rounded-[20px] max-w-[110vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -596,7 +609,7 @@ const page = () => {
                         <div className="text-neutral-300">College Minor Project &bull; Deep Learning</div>
                     </div>
                     <div className="flex items-center gap-2">
-                        <span className="">&bull; Not Deployed</span>
+                        <span className="text-neutral-500">&bull; Not Deployed</span>
                     </div>
                     <div className="text-neutral-300 w-full">A CNN Based Deep-Learning Video Analysis Model for Player Contact Detection in Football.</div>
                     <div className="flex flex-col items-start justify-start gap-0 w-full">
@@ -609,14 +622,40 @@ const page = () => {
                             <span className="font-[300]">&bull; Streamlit</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4">
-                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Check out</button> */}
-                        <button onClick={()=>redirect('https://github.com/harshpx/Virtual-Assistant-Referee')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-500">Source Code</button>
+                    <div className="flex items-center gap-2">
+                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button> */}
+                        <button onClick={()=>redirect('https://github.com/harshpx/Virtual-Assistant-Referee')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={virtualAssistantReferee} alt="VAR Image" className="rounded-[20px] max-w-[110vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
             </div>
-            {/* <Nav /> */}
+            {/* contact */}
+            <div id="contact" className={`flex flex-col items-center justify-center gap-20 p-10 w-full min-h-[70vh] border border-neutral-600 rounded-[30px] bg-[#cccccc] relative overflow-hidden`}>
+                <div className="flex flex-col items-center text-center justify-center gap-4 w-full z-20">
+                    <div className="text-4xl font-[300] text-black z-20">Let&apos;s build something great!</div>
+                    <div className="font-[300] text-black w-full md:w-2/3 z-20">Interested in starting your own website project with me?<br/>Excellent! I&apos;d love to talk to you about your idea.</div>
+                </div>
+                <div className="flex flex-col items-center text-center justify-center gap-5 w-full">
+                    <div className="text-3xl font-[300] text-black z-20">Connect with me</div>
+                    <div className="flex flex-wrap items-center justify-center gap-4">
+                        <div className="text-black flex items-center justify-center gap-2">
+                            <IoMdMailUnread size={30}/>
+                            <Link href={'mailto:harsh.rzf@gmail.com'} target="_blank" className="">harsh.rzf@gmail.com</Link>
+                        </div>
+                        <div className="text-black flex items-center justify-center gap-2">
+                            <FaLinkedin size={28}/>
+                            <Link href={'https://linkedin.com/in/harshpx'} target="_blank" className="">{`linkedin.com/in/harshpx`}</Link>
+                        </div>
+                        <div className="text-black flex items-center justify-center gap-2">
+                            <RiInstagramFill size={30}/>
+                            <Link href={'https://www.instagram.com/harshhh.hhhh?igsh=MWJrZGczNXd6MGFjMg=='} target="_blank" className="">{`instagram.com/harshhh.hhhh`}</Link>
+                        </div>
+                    </div>
+                </div>
+                <div className="absolute top-[-200px] right-[-300px] z-10 w-[50vh] h-[80vh] blur-2xl bg-blue-600 opacity-70 rotate-[-30deg] rounded-full"></div>
+                <div className="absolute top-[-300px] right-[-50px] w-[40vh] h-[80vh] blur-xl bg-blue-300 opacity-60 rotate-[-90deg] rounded-full"></div>
+            </div>
+            <Nav />
         </div>
     );
 };
