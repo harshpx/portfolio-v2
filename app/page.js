@@ -80,7 +80,7 @@ const page = () => {
                 </div>
                 
                 <div className={`flex flex-col justify-end gap-6 p-10 w-full min-h-[70vh] md:min-h-fit border border-neutral-600 rounded-[30px] bg-[#cccccc] relative overflow-hidden`}>
-                    <div className="text-4xl font-[300] text-black z-20">Let's build<br/>something great</div>
+                    <div className="text-4xl font-[300] text-black z-20">Let&apos;s build<br/>something great</div>
                     <div className="font-[300] text-black w-full md:w-2/3 z-20">Interested in starting your own website project with me? Excellent! I&apos;d love to talk to you about your idea.</div>
                     <button className="text-black rounded-[30px] border border-neutral-600 px-4 py-2 w-fit">Get in Touch</button>
                     <div className="absolute right-[-250px] z-10 w-[50vh] h-[80vh] blur-xl bg-blue-600 opacity-70 rotate-[-30deg] rounded-full"></div>
