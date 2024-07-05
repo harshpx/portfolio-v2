@@ -35,7 +35,8 @@ import miniBlog from "@/assets/miniBlog.png";
 import tealfox from "@/assets/tealfox.png";
 import virtualAssistantReferee from "@/assets/var.png";
 import useHover from "@/hooks/useHover";
-const page = () => {
+
+const Page = () => {
 
     const redirect = (url) => {
         window.open(url, "_blank");
@@ -729,4 +730,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default Page;
