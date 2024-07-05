@@ -56,7 +56,7 @@ const Page = () => {
     return (
         <div className="min-h-screen min-w-full bg-black text-white p-2 flex flex-col gap-2">
             {/* 1. Home */}
-            <div id="Home" className={`w-full md:h-[95vh] grid gap-2 grid-cols-1 md:grid-cols-2`}>
+            <div id="Home" className={`w-full lg:h-[900px] grid gap-2 grid-cols-1 lg:grid-cols-2`}>
                 {/* 1st card: intro */}
                 <div className={`rounded-[30px] border border-neutral-600 flex flex-col items-start justify-end gap-5 p-10 bg-gradient-to-b from-neutral-800 to-black min-h-[40vh] md:min-h-fit md:w-full`}>
                     <div className="w-full text-xl">Harsh Priye</div>
@@ -124,7 +124,7 @@ const Page = () => {
                 </div>
             </div>
             {/* 2. About */}
-            <div id="About" className={`w-full grid grid-cols-1 gap-2 md:h-[90vh] md:grid-cols-2`}>
+            <div id="About" className={`w-full lg:h-[900px] grid gap-2 grid-cols-1 lg:grid-cols-2`}>
                 {/* my journey */}
                 <div className={`rounded-[30px] border border-neutral-600 h-[80vh] md:h-full md:w-full md:row-span-2 relative overflow-hidden flex flex-col gap-7 p-10`}>
                     <div className="text-4xl font-[300]">My Journey so far</div>
