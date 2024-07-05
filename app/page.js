@@ -38,7 +38,7 @@ const page = () => {
     return (
         <div className="min-h-screen min-w-full bg-black text-white p-2 flex flex-col gap-2">
             {/* 1. Home */}
-            <div id="home" className={`w-full md:h-[95vh] grid gap-2 grid-cols-1 md:grid-cols-2`}>
+            <div id="Home" className={`w-full md:h-[95vh] grid gap-2 grid-cols-1 md:grid-cols-2`}>
                 {/* 1st card: intro */}
                 <div className={`rounded-[30px] border border-neutral-600 flex flex-col items-start justify-end gap-5 p-10 bg-gradient-to-b from-neutral-800 to-black min-h-[40vh] md:min-h-fit md:w-full`}>
                     <div className="w-full text-xl">Harsh Priye</div>
@@ -53,7 +53,7 @@ const page = () => {
                     <div className="flex items-center justify-start gap-2">
                         <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button className="flex items-center justify-center flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">
-                            <Link href="#projects" className="w-full">View Projects</Link>
+                            <Link href="#Projects" className="w-full">View Projects</Link>
                             <div className=""><FaArrowTrendUp size={20}/></div>
                         </button>
                     </div>
@@ -84,7 +84,7 @@ const page = () => {
                 </div>
             </div>
             {/* 2. About */}
-            <div id="about" className={`w-full grid grid-cols-1 gap-2 md:h-[90vh] md:grid-cols-2`}>
+            <div id="About" className={`w-full grid grid-cols-1 gap-2 md:h-[90vh] md:grid-cols-2`}>
                 {/* my journey */}
                 <div className={`rounded-[30px] border border-neutral-600 h-[80vh] md:h-full md:w-full md:row-span-2 relative overflow-hidden flex flex-col gap-7 p-10`}>
                     <div className="text-4xl font-[300]">My Journey so far</div>
@@ -103,19 +103,19 @@ const page = () => {
                     <div className="text-4xl font-[300] text-black z-20">Let&apos;s build<br/>something great</div>
                     <div className="font-[300] text-black w-full md:w-2/3 z-20">Interested in starting your own website project with me? Excellent! I&apos;d love to talk to you about your idea.</div>
                     <button className="text-black hover:text-white hover:bg-black rounded-[30px] border border-neutral-600 px-4 py-2 w-fit transition-all duration-300">
-                        <Link href='#contact' className="w-full">Get in Touch</Link>
+                        <Link href='#Contact' className="w-full">Get in Touch</Link>
                     </button>
                     <div className="absolute right-[-250px] z-10 w-[50vh] h-[80vh] blur-xl bg-blue-600 opacity-70 rotate-[-30deg] rounded-full"></div>
                     <div className="absolute right-[-50px] w-[40vh] h-[80vh] blur-xl bg-blue-300 opacity-60 rotate-[-90deg] rounded-full"></div>
                 </div>
             </div>
             {/* tech stack */}
-            <div id="stack" className="flex flex-col items-center justify-start p-10 gap-5 w-full min-h-[40vh] rounded-[30px] border border-neutral-600 bg-gradient-to-b from-neutral-800 to-black">
+            <div id="Stack" className="flex flex-col items-center justify-start p-10 gap-5 w-full min-h-[40vh] rounded-[30px] border border-neutral-600 bg-gradient-to-b from-neutral-800 to-black">
                 <h1 className="text-4xl font-[300]">My Tech Stack</h1>
                 <Crousel/>
             </div>
             {/* 3. education & experience */}
-            <div id="experience" className="w-full grid gap-2 grid-cols-1 md:grid-cols-2 min-h-[60vh]">
+            <div id="Ed&Exp" className="w-full grid gap-2 grid-cols-1 md:grid-cols-2 min-h-[60vh]">
                 {/* experience */}
                 <div className=" order-last md:order-first rounded-[30px] border border-neutral-600 p-10 h-full flex flex-col items-start gap-10 bg-[#cccccc] text-black relative overflow-hidden">
                     <div className="absolute right-[-350px] md:right-[-250px] top-[-400px] z-10 w-[50vh] h-[80vh] blur-xl bg-blue-600 opacity-70 rotate-[-15deg] md:rotate-[-30deg] rounded-full"/>
@@ -124,10 +124,12 @@ const page = () => {
                     <div className="w-full flex flex-col gap-10 z-20">
                         {/* hostkicker */}
                         <div className="flex flex-col gap-2">
-                            <span className="text-2xl font-[300]">Hostkicker</span>
-                            <span className="font-[300] text-neutral-700">Junior Full Stack Developer</span>
-                            <span className="font-[300] text-neutral-700">Jun 2024 - Present</span>
-                            <div className="flex flex-col text-neutral-800">
+                            <div className="flex flex-col gap-0">
+                                <span className="text-2xl font-[300]">Hostkicker</span>
+                                <span className="font-[300] text-neutral-700">Junior Full Stack Developer</span>
+                                <span className="font-[300] text-neutral-700">Jun 2024 - Present</span>
+                            </div>
+                            <div className="flex flex-col font-[300]">
                                 <span>&bull; Working on Advice on Click Application</span>
                                 <span>&bull; Used Nivo/Line for better data representation in UI</span>
                                 <span>&bull; Improved data aggregation logic for better data-grouping during visualization.</span>
@@ -138,6 +140,7 @@ const page = () => {
                                     <span className="font-[300]">&bull; Next.js</span>
                                     <span className="font-[300]">&bull; Typescript</span>
                                     <span className="font-[300]">&bull; Tailwind CSS</span>
+                                    <span className="font-[300]">&bull; Git</span>
                                     <span className="font-[300]">&bull; Bitbucket</span>
                                     <span className="font-[300]">&bull; Jira</span>
                                     <span className="font-[300]">&bull; Firebase</span>
@@ -148,10 +151,12 @@ const page = () => {
                         </div>
                         {/* aulacube */}
                         <div className="flex flex-col gap-2">
-                            <span className="text-2xl font-[300]">Aulacube</span>
-                            <span className="font-[300] text-neutral-700">Frontend Development Intern</span>
-                            <span className="font-[300] text-neutral-700">Mar 2024 - Jul 2024</span>
-                            <div className="flex flex-col text-neutral-800">
+                            <div className="flex flex-col gap-0">
+                                <span className="text-2xl font-[300]">Aulacube</span>
+                                <span className="font-[300] text-neutral-700">Frontend Development Intern</span>
+                                <span className="font-[300] text-neutral-700">Mar 2024 - Jul 2024</span>
+                            </div>
+                            <div className="flex flex-col font-[300]">
                                 <span>&bull; Introduced tailwind to the AulaEdge website for cross-device responsiveness.</span>
                                 <span>&bull; Improved Classroom setup by working on &apos;optional subjects&apos;, where individual students could be assigned to specific subjects.</span>
                                 <span>&bull; Worked on WhatApp messaging module for school notifications.</span>
@@ -163,6 +168,7 @@ const page = () => {
                                     <span className="font-[300]">&bull; React.js</span>
                                     <span className="font-[300]">&bull; Typescript</span>
                                     <span className="font-[300]">&bull; Tailwind CSS</span>
+                                    <span className="font-[300]">&bull; Git</span>
                                     <span className="font-[300]">&bull; Github</span>
                                     <span className="font-[300]">&bull; Ant Design</span>
                                     <span className="font-[300]">&bull; CI/CD</span>
@@ -235,7 +241,7 @@ const page = () => {
                 </div>
             </div>
             {/* 3. projects */}
-            <div id="projects" className="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
+            <div id="Projects" className="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div className="flex flex-col items-start justify-end gap-6 p-10 rounded-[30px] border border-neutral-600 md:col-span-2 bg-gradient-to-b from-neutral-800 to-black md:min-h-[40vh]">
                     <span className="text-4xl font-[300]">Projects</span>
                     <span className="font-[300]">My work has crossed many sectors.<br/>I&apos;ve built websites for startups, household names, as well as a number of personal projects.<br/>Always with a focus on reliability and efficiency.</span>
@@ -630,7 +636,7 @@ const page = () => {
                 </div>
             </div>
             {/* contact */}
-            <div id="contact" className={`flex flex-col items-center justify-center gap-20 p-10 w-full min-h-[70vh] border border-neutral-600 rounded-[30px] bg-[#cccccc] relative overflow-hidden`}>
+            <div id="Contact" className={`flex flex-col items-center justify-center gap-20 p-10 w-full min-h-[70vh] border border-neutral-600 rounded-[30px] bg-[#cccccc] relative overflow-hidden`}>
                 <div className="flex flex-col items-center text-center justify-center gap-4 w-full z-20">
                     <div className="text-4xl font-[300] text-black z-20">Let&apos;s build something great!</div>
                     <div className="font-[300] text-black w-full md:w-2/3 z-20">Interested in starting your own website project with me?<br/>Excellent! I&apos;d love to talk to you about your idea.</div>
