@@ -84,14 +84,14 @@ const page = () => {
                 </div>
             </div>
             {/* 2. About */}
-            <div id="about" className={`w-full grid grid-cols-1 gap-2 md:h-[95vh] md:grid-cols-2`}>
+            <div id="about" className={`w-full grid grid-cols-1 gap-2 md:h-[90vh] md:grid-cols-2`}>
                 {/* my journey */}
                 <div className={`rounded-[30px] border border-neutral-600 h-[80vh] md:h-full md:w-full md:row-span-2 relative overflow-hidden flex flex-col gap-7 p-10`}>
                     <div className="text-4xl font-[300]">My Journey so far</div>
                     <div>I dived into web dev and started developing websites from 2022, after that there was no stopping. I&apos;d worked for multiple startups, NGOs and big organizations and also done a lot of freelance.</div>
                     <div>I enjoy learning new tools, tech, and methods to make my development the best it can be.</div>
 
-                    <Image src={dp1} alt="CodeLab Image" className="rounded-[10px] max-w-[50vh] sm:max-w-[90vh] md:max-w-[100vh] h-auto border border-neutral-600 relative"/>
+                    <Image src={dp2} alt="CodeLab Image" className="rounded-[10px] max-w-[50vh] sm:max-w-[90vh] md:max-w-full lg:max-w-[100vh] h-auto border border-neutral-600 "/>
                 </div>
                 {/* about */}
                 <div className={`rounded-[30px] border border-neutral-600 flex flex-col items-start justify-end gap-5 p-10 bg-gradient-to-b from-neutral-800 to-black min-h-[40vh] md:min-h-fit md:w-full`}>
