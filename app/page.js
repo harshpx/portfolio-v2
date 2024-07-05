@@ -46,12 +46,10 @@ const Page = () => {
     const linkedinRef = useRef(null);
     const githubRef = useRef(null);
     const instagramRef = useRef(null);
-    // const resumeRef = useRef(null);
 
     const linkedinHover = useHover(linkedinRef);
     const githubHover = useHover(githubRef);
     const instagramHover = useHover(instagramRef);
-    // const resumeHover = useHover(resumeRef);
 
     return (
         <div className="min-h-screen min-w-full bg-black text-white p-2 flex flex-col gap-2">
@@ -74,10 +72,6 @@ const Page = () => {
                             <RiInstagramFill size={30}/>
                             <span className={`transition-all duration-150 ${instagramHover ? "w-[80px]" : "w-0 overflow-hidden"}`}>Instagram</span>
                         </Link>
-                        {/* <Link href="https://drive.google.com/file/d/1iaFFOSe93Svnnb1n9UaL7GcM-bJsV6R4/view?usp=sharing" target="_blank" className="flex items-center gap-2" ref={resumeRef}>
-                            <IoDocumentAttach size={30}/>
-                            <span className={`transition-all duration-150 ${resumeHover ? "w-[50px]" : "w-0 overflow-hidden"}`}>Resume</span>
-                        </Link> */}
                     </div>
                     <div className="w-full sm:w-1/2 md:w-2/3 font-[300]">Based in New Delhi, IN<br/>Building Reliable, Efficient and Robust Web Apps.</div>
                     <Link href="https://drive.google.com/file/d/1iaFFOSe93Svnnb1n9UaL7GcM-bJsV6R4/view?usp=sharing" target="_blank" className="flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
