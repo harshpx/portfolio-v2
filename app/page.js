@@ -1,11 +1,16 @@
 "use client";
-import React,{useState, useEffect} from "react";
+import React,{useState, useEffect, useRef} from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowTrendUp } from "react-icons/fa6";
 import { IoMdMailUnread } from "react-icons/io";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
+import { BsTerminalFill } from "react-icons/bs";
+import { IoLayers } from "react-icons/io5";
+import { AiOutlineApi } from "react-icons/ai";
+import { GiArtificialIntelligence } from "react-icons/gi";
+
 
 import Nav from "@/components/Nav";
 import Crousel from "@/components/Crousel";
@@ -29,11 +34,20 @@ import rentify from "@/assets/rentify.png";
 import miniBlog from "@/assets/miniBlog.png";
 import tealfox from "@/assets/tealfox.png";
 import virtualAssistantReferee from "@/assets/var.png";
+import useHover from "@/hooks/useHover";
 const page = () => {
 
     const redirect = (url) => {
         window.open(url, "_blank");
     }
+
+    const linkedinRef = useRef(null);
+    const githubRef = useRef(null);
+    const instagramRef = useRef(null);
+
+    const linkedinHover = useHover(linkedinRef);
+    const githubHover = useHover(githubRef);
+    const instagramHover = useHover(instagramRef);
 
     return (
         <div className="min-h-screen min-w-full bg-black text-white p-2 flex flex-col gap-2">
@@ -43,11 +57,25 @@ const page = () => {
                 <div className={`rounded-[30px] border border-neutral-600 flex flex-col items-start justify-end gap-5 p-10 bg-gradient-to-b from-neutral-800 to-black min-h-[40vh] md:min-h-fit md:w-full`}>
                     <div className="w-full text-xl">Harsh Priye</div>
                     <div className="w-full text-4xl text-wrap">Full Stack Developer,<br/>Machine Learning Enthusiast</div>
+                    <div className="w-full flex flex-wrap items-center gap-2 md:gap-4">
+                        <Link href="https://linkedin.com/in/harshpx" target="_blank" className="flex items-center gap-2" ref={linkedinRef}>
+                            <FaLinkedin size={28}/>
+                            <span className={`transition-all duration-150 ${linkedinHover ? "w-[60px]" : "w-0 overflow-hidden"}`}>Linkedin</span>
+                        </Link>
+                        <Link href="https://github.com/harshpx" target="_blank" className="flex items-center gap-2" ref={githubRef}>
+                            <FaGithub size={28}/>
+                            <span className={`transition-all duration-150 ${githubHover ? "w-[50px]" : "w-0 overflow-hidden"}`}>Github</span>
+                        </Link>
+                        <Link href="https://www.instagram.com/harshhh.hhhh" target="_blank" className="flex items-center gap-2" ref={instagramRef}>
+                            <RiInstagramFill size={30}/>
+                            <span className={`transition-all duration-150 ${instagramHover ? "w-[50px]" : "w-0 overflow-hidden"}`}>Instagram</span>
+                        </Link>
+                    </div>
                     <div className="w-full sm:w-1/2 md:w-2/3 font-[300]">Based in New Delhi, IN<br/>Building Reliable, Efficient and Robust Web Apps.</div>
                 </div>
                 {/* 2nd card: latest project */}
                 <div className={`rounded-[30px] border border-neutral-600 h-[80vh] md:h-full md:row-span-2 relative overflow-hidden flex flex-col gap-4 p-10`}>
-                    <div className="text-md">Latest Project</div>
+                    <div className="text-lg">Latest Project</div>
                     <div className="text-4xl font-[300]">CodeLab</div>
                     <div>Codelab is an online code compiler that is specifically designed for competitive programmers.</div>
                     <div className="flex items-center justify-start gap-2">
@@ -62,7 +90,7 @@ const page = () => {
                 {/* 3rd card: insights */}
                 <div className={`grid gap-2 min-h-[70vh] grid-cols-1 md:grid-cols-2 md:w-full md:min-h-fit`}>
                     <div className="h-full w-full p-10 rounded-[30px] border border-neutral-600 overflow-hidden relative flex flex-col">
-                        <div className="w-full mb-10">Web Insights</div>
+                        <div className="w-full mb-10 text-lg">Web Insights</div>
                         <div className="flex items-start justify-start gap-1 mb-8">
                             <div className="text-7xl">4x</div>
                             <FaArrowTrendUp size={30} className="text-green-500"/>
@@ -70,8 +98,8 @@ const page = () => {
                         <div className="z-20">Webpages are on average nearly four times larger than they were in 2010.</div>
                         <div className="rounded-[100%] overflow-hidden absolute inset-x-0 bottom-[-14vh] h-[20vh] w-full bg-green-500 opacity-70 blur-2xl"></div>
                     </div>
-                    <div className="h-h-full w-full p-10 rounded-[30px] border border-neutral-600 overflow-hidden relative flex flex-col justify-between">
-                        <div className="w-full mb-10">Services</div>
+                    <div className="h-full w-full p-10 rounded-[30px] border border-neutral-600 overflow-hidden relative flex flex-col justify-between">
+                        <div className="w-full mb-10 text-lg">Services</div>
                         <div className="flex flex-col items-start gap-8">
                             <span className="font-[300]">From UI/UX<br/>to Full Stack Web Apps, Backend Design and ML integration,<br/>I have services to offer everyone.</span>
                             <button className="flex items-center justify-center flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">
@@ -111,7 +139,7 @@ const page = () => {
             </div>
             {/* tech stack */}
             <div id="Stack" className="flex flex-col items-center justify-start p-10 gap-5 w-full min-h-[40vh] rounded-[30px] border border-neutral-600 bg-gradient-to-b from-neutral-800 to-black">
-                <h1 className="text-4xl font-[300]">My Tech Stack</h1>
+                <h1 className="text-5xl font-[300]">My Stack</h1>
                 <Crousel/>
             </div>
             {/* 3. education & experience */}
@@ -120,7 +148,7 @@ const page = () => {
                 <div className=" order-last md:order-first rounded-[30px] border border-neutral-600 p-10 h-full flex flex-col items-start gap-10 bg-[#cccccc] text-black relative overflow-hidden">
                     <div className="absolute right-[-350px] md:right-[-250px] top-[-400px] z-10 w-[50vh] h-[80vh] blur-xl bg-blue-600 opacity-70 rotate-[-15deg] md:rotate-[-30deg] rounded-full"/>
                     <div className="absolute right-[-200px] md:right-[-50px] top-[-400px] w-[40vh] h-[80vh] blur-xl bg-blue-300 opacity-60 rotate-[-90deg] rounded-full"/>
-                    <h1 className="text-4xl font-[300] z-20">Work Experience</h1>
+                    <h1 className="text-5xl font-[300] z-20">Experience</h1>
                     <div className="w-full flex flex-col gap-10 z-20">
                         {/* hostkicker */}
                         <div className="flex flex-col gap-2">
@@ -181,7 +209,7 @@ const page = () => {
                 <div className="rounded-[30px] border border-neutral-600 p-10 h-full flex flex-col items-start gap-10 relative overflow-hidden bg-gradient-to-b from-neutral-800 to-black">
                     <div className="absolute right-[-400px] md:right-[-300px] bottom-[-300px] z-10 w-[50vh] h-[80vh] blur-2xl bg-green-600 opacity-80 rotate-[45deg] rounded-full"/>
                     <div className="absolute right-[30px] bottom-[-500px] md:bottom-[-400px] w-[40vh] h-[80vh] blur-xl bg-green-300 opacity-40 rotate-[-90deg] rounded-full"/>
-                    <h1 className="text-4xl font-[300]">Education</h1>
+                    <h1 className="text-5xl font-[300]">Education</h1>
                     <div className="w-full flex flex-col gap-4">
                         {/* engg */}
                         <div className="flex flex-col gap-2">
@@ -243,7 +271,7 @@ const page = () => {
             {/* 3. projects */}
             <div id="Projects" className="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div className="flex flex-col items-start justify-end gap-6 p-10 rounded-[30px] border border-neutral-600 md:col-span-2 bg-gradient-to-b from-neutral-800 to-black md:min-h-[40vh]">
-                    <span className="text-4xl font-[300]">Projects</span>
+                    <span className="text-5xl font-[300]">Projects</span>
                     <span className="font-[300]">My work has crossed many sectors.<br/>I&apos;ve built websites for startups, household names, as well as a number of personal projects.<br/>Always with a focus on reliability and efficiency.</span>
                 </div>
                 {/* codelab */}
@@ -287,7 +315,7 @@ const page = () => {
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-green-500">&bull; Active</span>
                     </div>
-                    <div className="text-neutral-300 w-full">You are current browsing my personal portfolio!</div>
+                    <div className="text-neutral-300 w-full">You are currently browsing my personal portfolio!</div>
                     <div className="flex flex-col items-start justify-start gap-0 w-full">
                         <span>Tech Stack:</span>
                         <div className="flex flex-wrap w-full items-center gap-x-3">
@@ -635,10 +663,45 @@ const page = () => {
                     <Image src={virtualAssistantReferee} alt="VAR Image" className="rounded-[20px] max-w-[110vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
             </div>
+            {/* services */}
+            <div id="Services" className="w-full rounded-[30px] bg-gradient-to-b from-neutral-800 to-black border border-neutral-600 grid grid-cols-1 md:grid-cols-2 gap-2">
+                <div className="md:col-span-2 flex flex-col items-start justify-end gap-6 p-10 md:min-h-[30vh]">
+                    <span className="text-5xl font-[300]">Services</span>
+                    <span className="font-[300]">From Frontend finesse & Backend development to Full Stack Web Apps, Machine Learning and everything in between.<br/>I have services to offer everyone.</span>
+                </div>
+                <div className="flex flex-col items-start justify-center gap-6 p-10 md:min-h-[30vh]">
+                    <BsTerminalFill className="h-[15vh] w-auto"/>
+                    <div className="flex flex-col gap-2">
+                        <span className="text-4xl font-[300]">Full-Stack Web Development</span>
+                        <span className="font-[300] text-neutral-400">As a full stack developer, I offer comprehensive website development services from start to finish. This includes both front-end and back-end development, ensuring a seamless user experience and robust functionality.</span>
+                    </div>
+                </div>
+                <div className="flex flex-col items-start justify-center gap-6 p-10 md:min-h-[30vh]">
+                    <IoLayers className="h-[15vh] w-auto"/>
+                    <div className="flex flex-col gap-2">
+                        <span className="text-4xl font-[300]">UI/UX Development</span>
+                        <span className="font-[300] text-neutral-400">Whether you need a brand new website design or want to refresh the look and feel of an existing site, I leverage my design expertise to create stunning and intuitive interfaces that engage users and drive conversions.</span>
+                    </div>
+                </div>
+                <div className="flex flex-col items-start justify-center gap-6 p-10 md:min-h-[30vh]">
+                    <AiOutlineApi className="h-[15vh] w-auto"/>
+                    <div className="flex flex-col gap-2">
+                        <span className="text-4xl font-[300]">Production Grade API Development</span>
+                        <span className="font-[300] text-neutral-400">I specialize in developing robust and scalable APIs to enable seamless communication between different software applications or services.<br/>Whether you need to integrate third-party services, connect disparate systems within your organization, or build a custom API for your application, I have the expertise to deliver tailored solutions.</span>
+                    </div>
+                </div>
+                <div className="flex flex-col items-start justify-start gap-6 p-10 md:min-h-[30vh]">
+                    <GiArtificialIntelligence className="h-[15vh] w-auto"/>
+                    <div className="flex flex-col gap-2">
+                        <span className="text-4xl font-[300]">AI Integration in Web Applications</span>
+                        <span className="font-[300] text-neutral-400">Leveraging the power of artificial intelligence (AI) and machine learning (ML), I provide innovative solutions to solve complex business challenges and drive digital transformation.</span>
+                    </div>
+                </div>
+            </div>
             {/* contact */}
             <div id="Contact" className={`flex flex-col items-center justify-center gap-20 p-10 w-full min-h-[70vh] border border-neutral-600 rounded-[30px] bg-[#cccccc] relative overflow-hidden`}>
                 <div className="flex flex-col items-center text-center justify-center gap-4 w-full z-20">
-                    <div className="text-4xl font-[300] text-black z-20">Let&apos;s build something great!</div>
+                    <div className="text-5xl font-[300] text-black z-20">Let&apos;s build something great!</div>
                     <div className="font-[300] text-black w-full md:w-2/3 z-20">Interested in starting your own website project with me?<br/>Excellent! I&apos;d love to talk to you about your idea.</div>
                 </div>
                 <div className="flex flex-col items-center text-center justify-center gap-5 w-full">

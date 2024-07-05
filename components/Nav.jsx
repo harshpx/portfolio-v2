@@ -5,7 +5,8 @@ import { GoHomeFill, GoPersonFill } from "react-icons/go";
 import { TbAppsFilled } from "react-icons/tb";
 import { PiStackFill } from "react-icons/pi";
 import { MdMail } from "react-icons/md";
-import { RiGraduationCapFill } from "react-icons/ri";
+import { RiGraduationCapFill, RiServiceFill } from "react-icons/ri";
+
 import useHover from "@/hooks/useHover";
 import useWindowWidth from "@/hooks/useWindowWidth";
 
@@ -30,8 +31,9 @@ const Nav = () => {
                 <Button icon={<GoHomeFill/>} text="Home" />
                 <Button icon={<GoPersonFill/>} text="About"/>
                 <Button icon={<RiGraduationCapFill/>} text="Ed&Exp"/>
-                <Button icon={<TbAppsFilled/>} text="Projects"/>
                 <Button icon={<PiStackFill/>} text="Stack"/>
+                <Button icon={<TbAppsFilled/>} text="Projects"/>
+                <Button icon={<RiServiceFill/>} text="Services"/>
                 <Button icon={<MdMail/>} text="Contact"/>
             </div>
         </div>
