@@ -80,6 +80,8 @@ const Crousel = () => {
                         interval={2000}
                         infiniteLoop={true}
                         stopOnHover={false}
+                        swipeable={false}
+                        axis="vertical"
                     >
                         <StackCard icon={<SiJavascript />} name="JavaScript" />
                         <StackCard icon={<SiNextdotjs />} name="Next.js" />
@@ -107,6 +109,8 @@ const Crousel = () => {
                         interval={2000}
                         infiniteLoop={true}
                         stopOnHover={false}
+                        swipeable={false}
+                        axis="vertical"
                     >
                         <StackCard icon={<SiNodedotjs />} name="Node.js" />
                         <StackCard icon={<SiExpress />} name="Express.js" />
@@ -134,6 +138,8 @@ const Crousel = () => {
                         interval={2000}
                         infiniteLoop={true}
                         stopOnHover={false}
+                        swipeable={false}
+                        axis="vertical"
                     >
                         <StackCard icon={<SiVercel />} name="Vercel" />
                         <StackCard icon={<SiGithub />} name="GitHub" />
@@ -160,6 +166,8 @@ const Crousel = () => {
                         interval={2000}
                         infiniteLoop={true}
                         stopOnHover={false}
+                        swipeable={false}
+                        axis="vertical"
                     >
                         <StackCard icon={<SiPython />} name="Python" />
                         <StackCard icon={<SiTensorflow />} name="TensorFlow" />
