@@ -67,7 +67,7 @@ const page = () => {
                             <div className="text-7xl">4x</div>
                             <FaArrowTrendUp size={30} className="text-green-500"/>
                         </div>
-                        <div>Webpages are on average nearly four times larger than they were in 2010.</div>
+                        <div className="z-20">Webpages are on average nearly four times larger than they were in 2010.</div>
                         <div className="rounded-[100%] overflow-hidden absolute inset-x-0 bottom-[-14vh] h-[20vh] w-full bg-green-500 opacity-70 blur-2xl"></div>
                     </div>
                     <div className="h-h-full w-full p-10 rounded-[30px] border border-neutral-600 overflow-hidden relative flex flex-col justify-between">

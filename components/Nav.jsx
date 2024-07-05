@@ -23,7 +23,7 @@ const Button = ({icon,text})=>{
 
 const Nav = () => {
     return (
-        <div className="fixed bottom-10 left-0 w-full flex items-center justify-center">
+        <div className="fixed bottom-5 md:bottom-10 left-0 w-full flex items-center justify-center">
             <div className="rounded-[30px] bg-gradient-to-b from-neutral-500/50 to-neutral-600/60 w-fit px-5 py-3 flex items-center justify-center gap-3">
                 <Button icon={<GoHomeFill/>} text="Home" />
                 <Button icon={<GoPersonFill/>} text="Profile"/>
