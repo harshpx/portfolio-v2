@@ -246,7 +246,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">CodeLab</div>
                         <div className="text-neutral-300">Personal Project &bull; Web Dev &bull; Full-Stack</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-green-500">&bull; Active</span>
                     </div>
@@ -265,7 +265,7 @@ const page = () => {
                             <span className="font-[300]">&bull; OAuth</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button onClick={()=>redirect('https://github.com/harshpx/CodeLab')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
@@ -277,7 +277,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Personal Portfolio</div>
                         <div className="text-neutral-300">Portfolio &bull; Web Dev &bull; Frontend</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-green-500">&bull; Active</span>
                     </div>
@@ -290,7 +290,7 @@ const page = () => {
                             <span className="font-[300]">&bull; Tailwind CSS</span>
                         </div>
                     </div>
-                    {/* <div className="flex items-center gap-2">
+                    {/* <div className="flex flex-wrap items-center gap-2">
                         <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div> */}
@@ -302,7 +302,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Mini Tic-Tac-Toe</div>
                         <div className="text-neutral-300">Freelance Project &bull; Web Dev &bull; Full-Stack</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-yellow-500">&bull; Backend Not Active</span>
                     </div>
@@ -318,7 +318,7 @@ const page = () => {
                             <span className="font-[300]">&bull; Websockets</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <button onClick={()=>redirect('https://mini-tic-tac-toe.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button onClick={()=>redirect('https://github.com/harshpx/tic-tac-toe-socket')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
@@ -330,7 +330,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Memoize Notes</div>
                         <div className="text-neutral-300">Personal Project &bull; Web Dev &bull; Full-Stack</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-green-500">&bull; Active</span>
                     </div>
@@ -347,7 +347,7 @@ const page = () => {
                             <span className="font-[300]">&bull; MongoDB</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <button onClick={()=>redirect('https://memoize-notes.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button onClick={()=>redirect('https://github.com/harshpx/memoize')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
@@ -359,7 +359,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Aula Edge</div>
                         <div className="text-neutral-300">Work Project &bull; Aulacube &bull; Web Dev</div>
                     </div>
-                    {/* <div className="flex items-center gap-2">
+                    {/* <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-yellow-500">&bull; Backend Not Active</span>
                     </div> */}
@@ -374,7 +374,7 @@ const page = () => {
                             <span className="font-[300]">&bull; Github</span>
                         </div>
                     </div>
-                    {/* <div className="flex items-center gap-2">
+                    {/* <div className="flex flex-wrap items-center gap-2">
                         <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div> */}
@@ -386,7 +386,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Advice on Click</div>
                         <div className="text-neutral-300">Work Project &bull; Hostkicker &bull; Web Dev</div>
                     </div>
-                    {/* <div className="flex items-center gap-2">
+                    {/* <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-yellow-500">&bull; Backend Not Active</span>
                     </div> */}
@@ -402,7 +402,7 @@ const page = () => {
                             <span className="font-[300]">&bull; Jira</span>
                         </div>
                     </div>
-                    {/* <div className="flex items-center gap-2">
+                    {/* <div className="flex flex-wrap items-center gap-2">
                         <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div> */}
@@ -414,7 +414,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Deepfake Detection</div>
                         <div className="text-neutral-300">College Major Project &bull; Deep Learning &bull; Web Dev &bull; Full-Stack</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-neutral-500">&bull; Not Deployed</span>
                         {/* <span className="text-green-500">&bull; Active</span> */}
                     </div>
@@ -432,7 +432,7 @@ const page = () => {
                             <span className="font-[300]">&bull; Tailwind CSS</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button> */}
                         <button onClick={()=>redirect('https://github.com/harshpx/deepfake-detection')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
@@ -444,7 +444,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Dog Breed Identifier</div>
                         <div className="text-neutral-300">Personal Project &bull; Deep Learning &bull; Web Dev &bull; Full-Stack</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-yellow-500">&bull; Backend Not Active</span>
                     </div>
@@ -461,7 +461,7 @@ const page = () => {
                             <span className="font-[300]">&bull; Tailwind CSS</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <button onClick={()=>redirect('https://dog-breed-identifier-client.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button onClick={()=>redirect('https://github.com/harshpx/Dog-Breed-Identifier-client')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
@@ -473,7 +473,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Weather</div>
                         <div className="text-neutral-300">Personal Project &bull; Web Dev &bull; Frontend</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-green-500">&bull; Active</span>
                     </div>
@@ -489,7 +489,7 @@ const page = () => {
                             <span className="font-[300]">&bull; OpenWeather API</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <button onClick={()=>redirect('https://weather-harshpx.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button onClick={()=>redirect('https://github.com/harshpx/weather')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
@@ -501,7 +501,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Analytics Dashboard</div>
                         <div className="text-neutral-300">Freelance Project &bull; Web Dev &bull; Frontend</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-green-500">&bull; Active</span>
                     </div>
@@ -516,7 +516,7 @@ const page = () => {
                             <span className="font-[300]">&bull; Chart.js</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <button onClick={()=>redirect('https://dashboard-harshpx.vercel.app')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button onClick={()=>redirect('https://github.com/harshpx/dashboard')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
@@ -528,7 +528,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Rentify</div>
                         <div className="text-neutral-300">Freelance Project &bull; Web Dev &bull; Full-Stack</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-green-500">&bull; Active</span>
                     </div>
@@ -544,7 +544,7 @@ const page = () => {
                             <span className="font-[300]">&bull; MongoDB</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <button onClick={()=>redirect('https://rentify-harshpx.vercel.app')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button onClick={()=>redirect('https://github.com/harshpx/Rentify')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
@@ -556,7 +556,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">MiniBlog</div>
                         <div className="text-neutral-300">Personal Project &bull; Web Dev &bull; Full-Stack</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Deployed</span>
                         <span className="text-green-500">&bull; Active</span>
                         <span className="text-yellow-500">&bull; Deprecated</span>
@@ -573,7 +573,7 @@ const page = () => {
                             <span className="font-[300]">&bull; Appwrite</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <button onClick={()=>redirect('https://miniblogger.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
                         <button onClick={()=>redirect('https://github.com/harshpx/miniBlog')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
@@ -585,7 +585,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Tealfox</div>
                         <div className="text-neutral-300">Personal Project &bull; Design &bull; UI</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-green-500">&bull; Build Available</span>
                     </div>
                     <div className="text-neutral-300 w-full">UserStyle CSS theme for Firefox Browser, based on Teal color palette.</div>
@@ -596,7 +596,7 @@ const page = () => {
                             <span className="font-[300]">&bull; Firefox</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button> */}
                         <button onClick={()=>redirect('https://github.com/harshpx/TealFox')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
@@ -608,7 +608,7 @@ const page = () => {
                         <div className="text-4xl font-[300]">Virtual Assistant Referee</div>
                         <div className="text-neutral-300">College Minor Project &bull; Deep Learning</div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         <span className="text-neutral-500">&bull; Not Deployed</span>
                     </div>
                     <div className="text-neutral-300 w-full">A CNN Based Deep-Learning Video Analysis Model for Player Contact Detection in Football.</div>
@@ -622,7 +622,7 @@ const page = () => {
                             <span className="font-[300]">&bull; Streamlit</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex flex-wrap items-center gap-2">
                         {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button> */}
                         <button onClick={()=>redirect('https://github.com/harshpx/Virtual-Assistant-Referee')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
                     </div>
