@@ -2,18 +2,20 @@
 import React,{useState, useEffect, useRef} from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowTrendUp } from "react-icons/fa6";
+import { FaArrowTrendUp, FaRegCopyright } from "react-icons/fa6";
 import { IoMdMailUnread } from "react-icons/io";
+import { IoDocumentAttach } from "react-icons/io5";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { BsTerminalFill } from "react-icons/bs";
 import { IoLayers } from "react-icons/io5";
 import { AiOutlineApi } from "react-icons/ai";
 import { GiArtificialIntelligence } from "react-icons/gi";
-
+import { SiVercel } from "react-icons/si";
 
 import Nav from "@/components/Nav";
 import Crousel from "@/components/Crousel";
+import useHover from "@/hooks/useHover";
 
 import codelab1 from "@/assets/codelab1.png";
 import dp1 from "@/assets/dp1.jpeg";
@@ -34,7 +36,6 @@ import rentify from "@/assets/rentify.png";
 import miniBlog from "@/assets/miniBlog.png";
 import tealfox from "@/assets/tealfox.png";
 import virtualAssistantReferee from "@/assets/var.png";
-import useHover from "@/hooks/useHover";
 
 const Page = () => {
 
@@ -45,10 +46,12 @@ const Page = () => {
     const linkedinRef = useRef(null);
     const githubRef = useRef(null);
     const instagramRef = useRef(null);
+    // const resumeRef = useRef(null);
 
     const linkedinHover = useHover(linkedinRef);
     const githubHover = useHover(githubRef);
     const instagramHover = useHover(instagramRef);
+    // const resumeHover = useHover(resumeRef);
 
     return (
         <div className="min-h-screen min-w-full bg-black text-white p-2 flex flex-col gap-2">
@@ -69,10 +72,18 @@ const Page = () => {
                         </Link>
                         <Link href="https://www.instagram.com/harshhh.hhhh" target="_blank" className="flex items-center gap-2" ref={instagramRef}>
                             <RiInstagramFill size={30}/>
-                            <span className={`transition-all duration-150 ${instagramHover ? "w-[50px]" : "w-0 overflow-hidden"}`}>Instagram</span>
+                            <span className={`transition-all duration-150 ${instagramHover ? "w-[80px]" : "w-0 overflow-hidden"}`}>Instagram</span>
                         </Link>
+                        {/* <Link href="https://drive.google.com/file/d/1iaFFOSe93Svnnb1n9UaL7GcM-bJsV6R4/view?usp=sharing" target="_blank" className="flex items-center gap-2" ref={resumeRef}>
+                            <IoDocumentAttach size={30}/>
+                            <span className={`transition-all duration-150 ${resumeHover ? "w-[50px]" : "w-0 overflow-hidden"}`}>Resume</span>
+                        </Link> */}
                     </div>
                     <div className="w-full sm:w-1/2 md:w-2/3 font-[300]">Based in New Delhi, IN<br/>Building Reliable, Efficient and Robust Web Apps.</div>
+                    <Link href="https://drive.google.com/file/d/1iaFFOSe93Svnnb1n9UaL7GcM-bJsV6R4/view?usp=sharing" target="_blank" className="flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
+                        <div className=""><IoDocumentAttach size={20}/></div>
+                        <span className="w-full">View Resume</span>
+                    </Link >
                 </div>
                 {/* 2nd card: latest project */}
                 <div className={`rounded-[30px] border border-neutral-600 h-[80vh] md:h-full md:row-span-2 relative overflow-hidden flex flex-col gap-4 p-10`}>
@@ -80,9 +91,9 @@ const Page = () => {
                     <div className="text-4xl font-[300]">CodeLab</div>
                     <div>Codelab is an online code compiler that is specifically designed for competitive programmers.</div>
                     <div className="flex items-center justify-start gap-2">
-                        <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button className="flex items-center justify-center flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">
-                            <Link href="#Projects" className="w-full">View Projects</Link>
+                        <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button className="flex items-center justify-center flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
+                            <Link href="#Projects" className="w-full text-nowrap">View Projects</Link>
                             <div className=""><FaArrowTrendUp size={20}/></div>
                         </button>
                     </div>
@@ -103,8 +114,8 @@ const Page = () => {
                         <div className="w-full mb-10 text-lg">Services</div>
                         <div className="flex flex-col items-start gap-8">
                             <span className="font-[300]">From UI/UX<br/>to Full Stack Web Apps, Backend Design and ML integration,<br/>I have services to offer everyone.</span>
-                            <button className="flex items-center justify-center flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">
-                                <span className="w-full">View Services</span>
+                            <button className="flex items-center justify-center flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
+                                <Link href="#Services" className="w-full">View Services</Link>
                                 <FaArrowTrendUp size={20}/>
                             </button>
                         </div>
@@ -301,8 +312,8 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/CodeLab')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/CodeLab')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={codelab1} alt="CodeLab Image" className="rounded-[20px] max-w-[100vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -326,8 +337,8 @@ const Page = () => {
                         </div>
                     </div>
                     {/* <div className="flex flex-wrap items-center gap-2">
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div> */}
                     <Image src={portfolio1} alt="portfolio Image" className="rounded-[20px] max-w-[150vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -354,8 +365,8 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        <button onClick={()=>redirect('https://mini-tic-tac-toe.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/tic-tac-toe-socket')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        <button onClick={()=>redirect('https://mini-tic-tac-toe.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/tic-tac-toe-socket')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={ticTacToe} alt="TicTacToe Image" className="rounded-[20px] max-w-[90vh] lg:max-w-[100vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -383,8 +394,8 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        <button onClick={()=>redirect('https://memoize-notes.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/memoize')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        <button onClick={()=>redirect('https://memoize-notes.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/memoize')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={memoize1} alt="Memoize Image" className="rounded-[20px] max-w-[120vh] lg:max-w-[150vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -410,8 +421,8 @@ const Page = () => {
                         </div>
                     </div>
                     {/* <div className="flex flex-wrap items-center gap-2">
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div> */}
                     <Image src={aulacube} alt="Aulacube Image" className="rounded-[20px] max-w-[90vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -438,8 +449,8 @@ const Page = () => {
                         </div>
                     </div>
                     {/* <div className="flex flex-wrap items-center gap-2">
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div> */}
                     <Image src={aoc} alt="AOC Image" className="rounded-[20px] max-w-[90vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -468,8 +479,8 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button> */}
-                        <button onClick={()=>redirect('https://github.com/harshpx/deepfake-detection')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button> */}
+                        <button onClick={()=>redirect('https://github.com/harshpx/deepfake-detection')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={deepfake1} alt="Deepfake Image" className="rounded-[20px] max-w-[85vh] md:max-w-[80vh] lg:max-w-[95vh] xl:max-w-[100vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -497,8 +508,8 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        <button onClick={()=>redirect('https://dog-breed-identifier-client.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/Dog-Breed-Identifier-client')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        <button onClick={()=>redirect('https://dog-breed-identifier-client.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/Dog-Breed-Identifier-client')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={dogBreed1} alt="DogBreed Image" className="rounded-[20px] max-w-[90vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -525,8 +536,8 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        <button onClick={()=>redirect('https://weather-harshpx.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/weather')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        <button onClick={()=>redirect('https://weather-harshpx.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/weather')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={weather} alt="Weather Image" className="rounded-[20px] max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -552,8 +563,8 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        <button onClick={()=>redirect('https://dashboard-harshpx.vercel.app')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/dashboard')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        <button onClick={()=>redirect('https://dashboard-harshpx.vercel.app')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/dashboard')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={dashboard} alt="Dashboard Image" className="rounded-[20px] max-w-[110vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -580,8 +591,8 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        <button onClick={()=>redirect('https://rentify-harshpx.vercel.app')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/Rentify')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        <button onClick={()=>redirect('https://rentify-harshpx.vercel.app')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/Rentify')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={rentify} alt="Rentify Image" className="rounded-[20px] max-w-[110vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -609,8 +620,8 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        <button onClick={()=>redirect('https://miniblogger.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button>
-                        <button onClick={()=>redirect('https://github.com/harshpx/miniBlog')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        <button onClick={()=>redirect('https://miniblogger.vercel.app/')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <button onClick={()=>redirect('https://github.com/harshpx/miniBlog')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={miniBlog} alt="moniBlog Image" className="rounded-[20px] max-w-[110vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -632,8 +643,8 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button> */}
-                        <button onClick={()=>redirect('https://github.com/harshpx/TealFox')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button> */}
+                        <button onClick={()=>redirect('https://github.com/harshpx/TealFox')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={tealfox} alt="Tealfox Image" className="rounded-[20px] max-w-[110vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -658,8 +669,8 @@ const Page = () => {
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-2">
-                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Check out</button> */}
-                        <button onClick={()=>redirect('https://github.com/harshpx/Virtual-Assistant-Referee')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-500 transition-all duration-300">Source Code</button>
+                        {/* <button className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button> */}
+                        <button onClick={()=>redirect('https://github.com/harshpx/Virtual-Assistant-Referee')} className="text-[14px] hover:text-[13px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[150px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Source Code</button>
                     </div>
                     <Image src={virtualAssistantReferee} alt="VAR Image" className="rounded-[20px] max-w-[110vh] sm:max-w-[125vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
                 </div>
@@ -724,6 +735,17 @@ const Page = () => {
                 </div>
                 <div className="absolute top-[-200px] right-[-300px] z-10 w-[50vh] h-[80vh] blur-2xl bg-blue-600 opacity-70 rotate-[-30deg] rounded-full"></div>
                 <div className="absolute top-[-300px] right-[-50px] w-[40vh] h-[80vh] blur-xl bg-blue-300 opacity-60 rotate-[-90deg] rounded-full"></div>
+            </div>
+            {/* footer */}
+            <div className="w-full h-fit flex flex-col sm:flex-row items-center justify-between p-3 sm:p-8 text-sm sm:text-base">
+                <span className="text-neutral-300 font-[300] flex items-center gap-2"> 
+                    <FaRegCopyright className="text-neutral-300"/> 
+                    <span className="text-nowrap">2024 Harsh Priye, All Rights Reserved</span>
+                </span>
+                <span className="text-neutral-300 font-[300] flex items-center gap-2">
+                    <span>Hosted with</span>
+                    <span className="flex items-center gap-1 text-nowrap"><SiVercel/> Vercel</span>
+                </span>
             </div>
             <Nav />
         </div>
