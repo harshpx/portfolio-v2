@@ -11,7 +11,7 @@ import { BsTerminalFill } from "react-icons/bs";
 import { IoLayers } from "react-icons/io5";
 import { AiOutlineApi } from "react-icons/ai";
 import { GiArtificialIntelligence } from "react-icons/gi";
-import { SiNextdotjs, SiVercel } from "react-icons/si";
+import { SiNextdotjs, SiVercel, SiTailwindcss } from "react-icons/si";
 
 import Nav from "@/components/Nav";
 import Crousel from "@/components/Crousel";
@@ -731,12 +731,10 @@ const Page = () => {
                 <div className="absolute top-[-300px] right-[-50px] w-[40vh] h-[80vh] blur-xl bg-blue-300 opacity-60 rotate-[-90deg] rounded-full"></div>
             </div>
             {/* footer */}
-            <div className="w-full h-fit flex flex-col md:flex-row items-center justify-between gap-2 p-4 sm:p-8 text-sm sm:text-base">
+            <div className="w-full h-fit flex flex-col lg:flex-row items-center justify-between gap-2 p-4 md:p-6 lg:p-8 text-sm sm:text-base">
                 <span className="flex items-center"><FaRegCopyright className="text-neutral-300"/>&nbsp;2024 Harsh Priye,&nbsp;&nbsp;&nbsp;All Rights Reserved</span>
-                <div className="flex flex-col sm:flex-row gap-x-2">
-                    <span className="flex items-center">Hosted with&nbsp;&nbsp;<SiVercel/>&nbsp;Vercel,</span>
-                    <span className="flex items-center">Powered by&nbsp;&nbsp;<SiNextdotjs/>&nbsp;Next.js</span>
-                </div>
+                <span className="flex items-center">Hosted with&nbsp;&nbsp;<SiVercel/>&nbsp;Vercel</span>
+                <span className="flex items-center">Built with&nbsp;&nbsp;<SiNextdotjs/>&nbsp;Next.js&nbsp;&nbsp;&&nbsp;&nbsp;<SiTailwindcss/>&nbsp;TailwindCSS</span>
             </div>
             <Nav />
         </div>
