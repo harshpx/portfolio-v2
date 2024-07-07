@@ -1,4 +1,5 @@
 import "./globals.css";
+import Nav from "@/app/Nav";
 
 export const metadata = {
     title: "Harsh Priye",
@@ -11,7 +12,10 @@ export default function RootLayout({ children }) {
             <head>
                 <link rel="icon" type="image/*" href="/code1.png" />
             </head>
-            <body className={``}>{children}</body>
+            <body className={``}>
+                {children}
+                <Nav />
+            </body>
         </html>
     );
 }

@@ -34,12 +34,12 @@
     animation: spin 6.66s linear infinite;
     border: 1px dashed var(--col-border);
     border-radius: 50%;
-    height: 160px;
+    height: 180px;
     margin: calc(666px / 2) auto;
     margin: calc(50vmin - (66.6vmin / 2)) auto;
     transform-style: preserve-3d;
     /* transform-style: none; */
-    width: 160px;
+    width: 180px;
 }
 
 .sphere:hover {
@@ -52,11 +52,11 @@
     border: 1px dashed var(--col-border);
     border-radius: 50%;
     content: "";
-    height: 160px;
+    height: 180px;
     position: absolute;
     left: 0;
     top: 0;
-    width: 160px;
+    width: 180px;
 }
 
 .sphere:hover::before,
@@ -98,3 +98,29 @@
 .animate-marquee2 {
     animation: marquee2 10s linear infinite;
 } */
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - 2rem));
+    }
+}
+
+@keyframes scroll2 {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(calc(100% + 2rem));
+    }
+}
+
+.marquee {
+    animation: scroll 15s linear infinite;
+}
+
+.marquee2 {
+    animation: scroll2 15s linear infinite;
+}
