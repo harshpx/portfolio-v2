@@ -1,5 +1,5 @@
 import "./globals.css";
-import Nav from "@/app/Nav";
+import Nav from "@/components/Nav";
 
 export const metadata = {
     title: "Harsh Priye",

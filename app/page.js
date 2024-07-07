@@ -5,12 +5,11 @@ import Link from "next/link";
 import { FaArrowTrendUp, FaRegCopyright } from "react-icons/fa6";
 
 import { IoDocumentAttach } from "react-icons/io5";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-import { RiInstagramFill } from "react-icons/ri";
+import { FaLinkedin, FaGithub, FaAward } from "react-icons/fa";
+import { RiInstagramFill, RiServiceFill } from "react-icons/ri";
+import { TbAppsFilled } from "react-icons/tb";
 import { SiNextdotjs, SiVercel, SiTailwindcss } from "react-icons/si";
 
-import Nav from "@/app/Nav";
-import Footer from "@/components/Footer";
 import useHover from "@/hooks/useHover";
 import Screen from "@/components/Screen";
 
@@ -62,39 +61,35 @@ const Page = () => {
                         <span className="w-full">View Resume</span>
                     </Link >
                 </div>
-                {/* 2nd card: latest project */}
-                <div className={`rounded-[30px] border border-neutral-600 h-[80vh] md:h-full md:row-span-2 relative overflow-hidden flex flex-col gap-4 p-10`}>
-                    <div className="text-lg">Latest Project</div>
-                    <div className="text-4xl font-[300]">CodeLab</div>
-                    <div>Codelab is an online code compiler that is specifically designed for competitive programmers.</div>
-                    <div className="flex items-center justify-start gap-2">
-                        <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
-                        <button className="flex items-center justify-center flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
-                            <Link href="#Projects" className="w-full text-nowrap">View Projects</Link>
-                            <div className=""><FaArrowTrendUp size={20}/></div>
-                        </button>
-                    </div>
-                    <Image src={codelab1} priority alt="CodeLab Image" className="rounded-[20px] max-w-[100vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
+                {/* journey so far */}
+                <div className="rounded-[30px] border border-neutral-600 h-[80vh] md:h-full md:row-span-2 relative overflow-hidden flex flex-col gap-4 p-10">
+                    <div className="text-4xl font-[300]">My Journey so far</div>
+                    <div className="font-[300] text-neutral-300">I dived into web dev and started developing websites from 2022, after that there was no stopping. I&apos;d worked for multiple startups, NGOs and big organizations and also done a lot of freelance.</div>
+                    <div className="font-[300] text-neutral-300">I enjoy learning new tools, tech, and methods to make my development the best it can be.</div>
+
+                    <Image src={dp2} alt="My Image" className="rounded-[10px] max-w-[50vh] sm:max-w-[90vh] md:max-w-full lg:max-w-[100vh] h-auto border border-neutral-600 grayscale"/>
                 </div>
                 {/* 3rd card: insights */}
                 <div className={`grid gap-2 min-h-[70vh] grid-cols-1 md:grid-cols-2 md:w-full md:min-h-fit`}>
                     <div className="h-full w-full p-10 rounded-[30px] border border-neutral-600 overflow-hidden relative flex flex-col">
                         <div className="w-full mb-10 text-lg">Web Insights</div>
                         <div className="flex items-start justify-start gap-1 mb-8">
-                            <div className="text-7xl">4x</div>
-                            <FaArrowTrendUp size={30} className="text-green-500"/>
+                            <div className="text-7xl">1<sup>st</sup></div>
+                            <FaAward size={30} className="text-green-500"/>
                         </div>
-                        <div className="z-20">Webpages are on average nearly four times larger than they were in 2010.</div>
+                        <div className="z-20 font-[300] text-neutral-300">
+                            The very first website was created by Tim Berners-Lee, the inventor of the World Wide Web, in 1991. It's still online and you can visit it at <Link href="https://info.cern.ch" target="_blank" className="text-green-500 hover:underline">info.cern.ch</Link>
+                        </div>
                         <div className="rounded-[100%] overflow-hidden absolute inset-x-0 bottom-[-14vh] h-[20vh] w-full bg-green-500 opacity-70 blur-2xl"></div>
                     </div>
                     <div className="h-full w-full p-10 rounded-[30px] border border-neutral-600 overflow-hidden relative flex flex-col justify-between">
                         <div className="w-full mb-10 text-lg">Services</div>
                         <div className="flex flex-col items-start gap-8">
-                            <span className="font-[300]">From UI/UX<br/>to Full Stack Web Apps, Backend Design and ML integration,<br/>I have services to offer everyone.</span>
-                            <button className="flex items-center justify-center flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[160px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
-                                <Link href="#Services" className="w-full">View Services</Link>
-                                <FaArrowTrendUp size={20}/>
-                            </button>
+                            <span className="font-[300] text-neutral-300">From UI/UX<br/>to Full Stack Web Apps, Backend Design and ML integration,<br/>I have services to offer everyone.</span>
+                            <Link href="/Services" className="flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
+                                <div className=""><RiServiceFill size={20}/></div>
+                                <span className="w-full">View Services</span>
+                            </Link >
                         </div>
                         <div className="sphere"/>
                     </div>
@@ -102,26 +97,34 @@ const Page = () => {
             </div>
             {/* About */}
             <div id="About" className={`w-full lg:h-[900px] grid gap-2 grid-cols-1 lg:grid-cols-2`}>
-                {/* my journey */}
-                <div className={`rounded-[30px] border border-neutral-600 h-[80vh] md:h-full md:w-full md:row-span-2 relative overflow-hidden flex flex-col gap-7 p-10`}>
-                    <div className="text-4xl font-[300]">My Journey so far</div>
-                    <div>I dived into web dev and started developing websites from 2022, after that there was no stopping. I&apos;d worked for multiple startups, NGOs and big organizations and also done a lot of freelance.</div>
-                    <div>I enjoy learning new tools, tech, and methods to make my development the best it can be.</div>
+                {/* latest project */}
+                <div className="rounded-[30px] border border-neutral-600 h-[80vh] md:h-full md:w-full md:row-span-2 relative overflow-hidden flex flex-col gap-7 p-10">
+                    
+                    <div className="text-lg">Latest Project</div>
+                    <div className="text-4xl font-[300]">CodeLab</div>
+                    <div className="font-[300] text-neutral-300">Codelab is an online code compiler that is specifically designed for competitive programmers.</div>
+                    <div className="flex items-center justify-start gap-2">
+                        <button onClick={()=>redirect('https://codelab-harshpx.vercel.app/')} className="text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 w-[130px] h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">Check out</button>
+                        <Link href="/Projects" className="flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
+                            <div className=""><TbAppsFilled size={20}/></div>
+                            <span className="w-full">View Projects</span>
+                        </Link >
+                    </div>
+                    <Image src={codelab1} priority alt="CodeLab Image" className="rounded-[20px] max-w-[100vh] h-auto border border-neutral-600 relative left-0 bottom-[-20px] sm:bottom-[-20px] md:bottom-[0px]"/>
 
-                    <Image src={dp2} alt="CodeLab Image" className="rounded-[10px] max-w-[50vh] sm:max-w-[90vh] md:max-w-full lg:max-w-[100vh] h-auto border border-neutral-600 "/>
                 </div>
                 {/* about */}
                 <div className={`rounded-[30px] border border-neutral-600 flex flex-col items-start justify-end gap-5 p-10 bg-gradient-to-b from-neutral-800 to-black min-h-[40vh] md:min-h-fit md:w-full`}>
                     <div className="w-full text-4xl font-[300] text-wrap">About</div>
-                    <div className="w-full sm:w-3/4 font-[200]">Hi there! Nice to meet you. My name is Harsh.<br/>I&apos;m a passionate web developer based in New Delhi, India.<br/>I love to spend my time building robust, efficient, reliable, modern, and low-carbon websites.</div>
+                    <div className="w-full sm:w-3/4 font-[300] text-neutral-300">Hi there! Nice to meet you. My name is Harsh.<br/>I&apos;m a passionate web developer based in New Delhi, India.<br/>I love to spend my time building robust, efficient, reliable, modern, and low-carbon websites.</div>
                 </div>
                 {/* contact card */}
                 <div className={`flex flex-col justify-end gap-6 p-10 w-full min-h-[70vh] md:min-h-fit border border-neutral-600 rounded-[30px] bg-[#cccccc] relative overflow-hidden`}>
                     <div className="text-4xl font-[300] text-black z-20">Let&apos;s build<br/>something great</div>
                     <div className="font-[300] text-black w-full md:w-2/3 z-20">Interested in starting your own website project with me? Excellent! I&apos;d love to talk to you about your idea.</div>
-                    <button className="text-black hover:text-white hover:bg-black rounded-[30px] border border-neutral-600 px-4 py-2 w-fit transition-all duration-300">
-                        <Link href='#Contact' className="w-full">Get in Touch</Link>
-                    </button>
+                    <Link href='/Contact' className="flex items-center justify-center gap-2 flex-nowrap w-fit text-[14px] text-black rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:text-white hover:bg-black transition-all duration-300">
+                        <span className="w-full">Get in Touch</span>
+                    </Link>
                     <div className="absolute right-[-250px] z-10 w-[50vh] h-[80vh] blur-xl bg-blue-600 opacity-70 rotate-[-30deg] rounded-full"></div>
                     <div className="absolute right-[-50px] w-[40vh] h-[80vh] blur-xl bg-blue-300 opacity-60 rotate-[-90deg] rounded-full"></div>
                 </div>

@@ -37,7 +37,7 @@ const Page = () => {
                 <div className="relative overflow-hidden p-10 min-h-[40vh] w-full flex flex-col justify-between items-start rounded-[30px] border border-neutral-600">
                     <span className="text-4xl font-[300]">View my work</span>
                     <span className="font-[300] lg:w-2/3">My work has crossed many sectors. I&apos;ve built websites for startups, household names, as well as a number of personal projects. Always with a focus on reliability and efficiency.</span>
-                    <Link href="#" className="flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
+                    <Link href="/Projects" className="flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
                         <div className=""><TbAppsFilled size={20}/></div>
                         <span className="w-full">View Projects</span>
                     </Link >
@@ -46,7 +46,7 @@ const Page = () => {
                 <div className="relative overflow-hidden p-10 min-h-[40vh] w-full flex flex-col justify-between items-start gap-4 rounded-[30px] border border-neutral-600">
                     <span className="text-4xl font-[300] z-20">Checkout Services</span>
                     <span className="font-[300] lg:w-2/3 z-20">I offer a range of services to help you get your website up and running. From design to development, I can help you with every step of the process.</span>
-                    <Link href="#" className="flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
+                    <Link href="/Services" className="flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
                         <div className=""><RiServiceFill size={20}/></div>
                         <span className="w-full">View Services</span>
                     </Link>
