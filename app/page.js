@@ -78,7 +78,7 @@ const Page = () => {
                             <FaAward size={30} className="text-green-500"/>
                         </div>
                         <div className="z-20 font-[300] text-neutral-300">
-                            The very first website was created by Tim Berners-Lee, the inventor of the World Wide Web, in 1991. It's still online and you can visit it at <Link href="https://info.cern.ch" target="_blank" className="text-green-500 hover:underline">info.cern.ch</Link>
+                            The very first website was created by Tim Berners-Lee, the inventor of the World Wide Web, in 1991. It&apos;s still online and you can visit it at <Link href="https://info.cern.ch" target="_blank" className="text-green-500 hover:underline">info.cern.ch</Link>
                         </div>
                         <div className="rounded-[100%] overflow-hidden absolute inset-x-0 bottom-[-14vh] h-[20vh] w-full bg-green-500 opacity-70 blur-2xl"></div>
                     </div>
