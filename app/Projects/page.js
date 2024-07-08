@@ -431,7 +431,7 @@ const Page = () => {
                 <div className="relative overflow-hidden p-10 min-h-[40vh] w-full flex flex-col justify-between items-start gap-4 rounded-[30px] border border-neutral-600 bg-[#cccccc] text-black">
                     <div className="text-4xl font-[300] z-20">Let&apos;s build<br/>something great</div>
                     <div className="font-[300] w-full md:w-2/3 z-20">Interested in starting your own website project with me? Excellent! I&apos;d love to talk to you about your idea.</div>
-                    <Link href='/Contact' className="flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:text-white hover:bg-black transition-all duration-300">
+                    <Link href='/Contact' className="z-20 flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:text-white hover:bg-black transition-all duration-300">
                         <span className="w-full">Get in Touch</span>
                     </Link>
                     <div className="absolute right-[-250px] z-10 w-[50vh] h-[80vh] blur-xl bg-blue-600 opacity-70 rotate-[-30deg] rounded-full"></div>
@@ -440,7 +440,7 @@ const Page = () => {
                 <div className="relative overflow-hidden p-10 min-h-[40vh] w-full flex flex-col justify-between items-start gap-4 rounded-[30px] border border-neutral-600">
                     <span className="text-4xl font-[300] z-20">Checkout Services</span>
                     <span className="font-[300] lg:w-2/3 z-20">I offer a range of services to help you get your website up and running. From design to development, I can help you with every step of the process.</span>
-                    <Link href="/Services" className="flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
+                    <Link href="/Services" className="z-20 flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
                         <div className=""><RiServiceFill size={20}/></div>
                         <span className="w-full">View Services</span>
                     </Link>
