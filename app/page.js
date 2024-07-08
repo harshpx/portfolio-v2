@@ -1,23 +1,21 @@
 "use client";
-import React,{useState, useEffect, useRef} from "react";
+import {useRef} from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaArrowTrendUp, FaRegCopyright } from "react-icons/fa6";
 
 import { IoDocumentAttach } from "react-icons/io5";
 import { FaLinkedin, FaGithub, FaAward } from "react-icons/fa";
 import { RiInstagramFill, RiServiceFill } from "react-icons/ri";
 import { TbAppsFilled } from "react-icons/tb";
-import { SiNextdotjs, SiVercel, SiTailwindcss } from "react-icons/si";
 
 import useHover from "@/hooks/useHover";
 import Screen from "@/components/Screen";
 
 import codelab1 from "@/assets/codelab1.png";
-import dp1 from "@/assets/dp1.jpeg";
+// import dp1 from "@/assets/dp1.jpeg";
 import dp2 from "@/assets/dp2.jpg";
-import dp3 from "@/assets/dp3.webp";
-import dp4 from "@/assets/dp4.webp";
+// import dp3 from "@/assets/dp3.webp";
+// import dp4 from "@/assets/dp4.webp";
 
 const Page = () => {
 

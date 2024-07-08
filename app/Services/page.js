@@ -45,7 +45,7 @@ const Page = () => {
             <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div className="relative overflow-hidden p-10 min-h-[40vh] w-full flex flex-col justify-between items-start gap-4 rounded-[30px] border border-neutral-600">
                 <span className="text-4xl font-[300]">View my work</span>
-                    <span className="font-[300] lg:w-2/3">My work has crossed many sectors. I&apos;ve built websites for startups, household names, as well as a number of personal projects. Always with a focus on reliability and efficiency.</span>
+                    <span className="font-[300] text-neutral-300 lg:w-2/3">My work has crossed many sectors. I&apos;ve built websites for startups, household names, as well as a number of personal projects. Always with a focus on reliability and efficiency.</span>
                     <Link href="/Projects" className="z-20 flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
                         <div className=""><TbAppsFilled size={20}/></div>
                         <span className="w-full">View Projects</span>

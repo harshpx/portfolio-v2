@@ -15,7 +15,7 @@ import aulacube from "@/assets/aulacube.png";
 import aoc from "@/assets/aoc.png";
 import weather from "@/assets/weather.png";
 import dashboard from "@/assets/dashboard.png";
-import comments from "@/assets/comments.png";
+// import comments from "@/assets/comments.png";
 import rentify from "@/assets/rentify.png";
 import miniBlog from "@/assets/miniBlog.png";
 import tealfox from "@/assets/tealfox.png";
@@ -32,7 +32,7 @@ const Page = () => {
             <div id="Projects" className="w-full grid grid-cols-1 md:grid-cols-2 gap-2">
                 <div className="flex flex-col items-start justify-end gap-6 p-10 rounded-[30px] border border-neutral-600 bg-gradient-to-b from-neutral-800 to-black md:min-h-[40vh]">
                     <span className="text-5xl font-[300]">Projects</span>
-                    <span className="font-[300]">My work has crossed many sectors.<br/>I&apos;ve built websites for startups, household names, as well as a number of personal projects.<br/>Always with a focus on reliability and efficiency.</span>
+                    <span className="font-[300] text-neutral-300">My work has crossed many sectors.<br/>I&apos;ve built websites for startups, household names, as well as a number of personal projects.<br/>Always with a focus on reliability and efficiency.</span>
                 </div>
                 <div id="Stack" className="flex flex-col items-center justify-start p-10 md:px-0 md:py-10 gap-10 w-full min-h-[40vh] rounded-[30px] border border-neutral-600 bg-gradient-to-b from-neutral-800 to-black">
                     <h1 className="text-5xl font-[300]">My Stack</h1>
@@ -439,7 +439,7 @@ const Page = () => {
                 </div>
                 <div className="relative overflow-hidden p-10 min-h-[40vh] w-full flex flex-col justify-between items-start gap-4 rounded-[30px] border border-neutral-600">
                     <span className="text-4xl font-[300] z-20">Checkout Services</span>
-                    <span className="font-[300] lg:w-2/3 z-20">I offer a range of services to help you get your website up and running. From design to development, I can help you with every step of the process.</span>
+                    <span className="font-[300] text-neutral-300 lg:w-2/3 z-20">I offer a range of services to help you get your website up and running. From design to development, I can help you with every step of the process.</span>
                     <Link href="/Services" className="z-20 flex items-center justify-center gap-2 flex-nowrap text-[14px] rounded-[30px] border border-neutral-600 px-4 py-2 h-[40px] hover:border-black hover:bg-green-600 transition-all duration-300">
                         <div className=""><RiServiceFill size={20}/></div>
                         <span className="w-full">View Services</span>
