@@ -1,5 +1,6 @@
 import "./globals.css";
 import Nav from "@/components/Nav";
+import SuspenseWrapper from "@/components/SuspenseWrapper";
 import Analytics from "@/components/Analytics";
 import Script from "next/script";
 
@@ -31,9 +32,11 @@ export default function RootLayout({ children }) {
                 </Script>
             </head>
             <body>
-                <Analytics />
                 {children}
                 <Nav />
+                <SuspenseWrapper>
+                    <Analytics />
+                </SuspenseWrapper>
             </body>
         </html>
     );

@@ -8,18 +8,19 @@ const GA_TRACKING_ID = "G-222CM8HCHC";
 const Analytics = () => {
     const pathname = usePathname();
     const searchParams = useSearchParams();
-
+  
     useEffect(() => {
-        const handleRouteChange = (url) => {
-            window.gtag("config", GA_TRACKING_ID, {
-                page_path: url,
-            });
-        };
-
-        handleRouteChange(`${pathname}${searchParams}`);
+      const handleRouteChange = () => {
+        const url = `${pathname}${searchParams.toString()}`;
+        window.gtag("config", GA_TRACKING_ID, {
+          page_path: url,
+        });
+      };
+  
+      handleRouteChange();
     }, [pathname, searchParams]);
-
+  
     return null;
-};
+  };
 
 export default Analytics;
