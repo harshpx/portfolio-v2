@@ -15,6 +15,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
+                <link rel="icon" type="image/*" href="/code1.png" />
                 <Script
                     async
                     src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
