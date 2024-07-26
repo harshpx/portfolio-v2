@@ -282,14 +282,14 @@ const Page = () => {
                                 <span className="text-2xl font-[300]">
                                     Hostkicker
                                 </span>
-                                <span className="font-[300] text-neutral-700">
-                                    Junior Full Stack Developer
+                                <span className="font-[300] text-neutral-900">
+                                    Junior Full Stack Developer &bull; Internship
                                 </span>
                                 <span className="font-[300] text-neutral-700">
-                                    Jun 2024 - Present
+                                    May 2024 - Jun 2024
                                 </span>
                             </div>
-                            <div className="flex flex-col font-[300]">
+                            <div className="flex flex-col font-[300] text-neutral-700">
                                 <span>
                                     &bull; Working on Advice on Click
                                     Application
@@ -342,14 +342,14 @@ const Page = () => {
                                 <span className="text-2xl font-[300]">
                                     Aulacube
                                 </span>
-                                <span className="font-[300] text-neutral-700">
-                                    Frontend Development Intern
+                                <span className="font-[300] text-neutral-900">
+                                    Frontend Developer &bull; Internship
                                 </span>
                                 <span className="font-[300] text-neutral-700">
-                                    Mar 2024 - Jul 2024
+                                    Mar 2024 - June 2024
                                 </span>
                             </div>
-                            <div className="flex flex-col font-[300]">
+                            <div className="flex flex-col font-[300] text-neutral-700">
                                 <span>
                                     &bull; Introduced tailwind to the AulaEdge
                                     website for cross-device responsiveness.
@@ -392,6 +392,44 @@ const Page = () => {
                                     </span>
                                     <span className="font-[300]">
                                         &bull; CI/CD
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <div className="flex flex-col gap-0">
+                                <span className="text-2xl font-[300]">
+                                    Youth Empowerment Foundation
+                                </span>
+                                <span className="font-[300] text-neutral-900">
+                                    Technology Intern &bull; Internship
+                                </span>
+                                <span className="font-[300] text-neutral-700">
+                                    Jan 2023 - March 2023
+                                </span>
+                            </div>
+                            <div className="flex flex-col font-[300] text-neutral-700">
+                                <span>
+                                    &bull; Built a Retinal Multi-Disease Detection model using TensorFlow, for door-to-door preliminary Eye Checkups in various Shelter Homes and Old Age Homes across Delhi-NCR region.
+                                </span>
+                                <span>
+                                    &bull; Created a responsive web application incorporating the trained model using FastAPI server and React.js
+                                </span>
+                            </div>
+                            <div className="flex items-start justify-start gap-4">
+                                <span>Skills:</span>
+                                <div className="flex flex-wrap w-full md:w-2/3 items-center gap-x-3">
+                                    <span className="font-[300]">
+                                        &bull; Python
+                                    </span>
+                                    <span className="font-[300]">
+                                        &bull; TensorFlow
+                                    </span>
+                                    <span className="font-[300]">
+                                        &bull; FastAPI
+                                    </span>
+                                    <span className="font-[300]">
+                                        &bull; React.js
                                     </span>
                                 </div>
                             </div>
