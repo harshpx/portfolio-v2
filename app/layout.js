@@ -1,5 +1,6 @@
 import "./globals.css";
 import Nav from "@/components/Nav";
+import { Analytics } from "@vercel/analytics/react"
 // import SuspenseWrapper from "@/components/SuspenseWrapper";
 // import Analytics from "@/components/Analytics";
 // import Script from "next/script";
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
             <body>
                 {children}
                 <Nav />
+                <Analytics/>
                 {/* <SuspenseWrapper>
                     <Analytics />
                 </SuspenseWrapper> */}
