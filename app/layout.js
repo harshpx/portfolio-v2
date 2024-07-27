@@ -1,22 +1,21 @@
 import "./globals.css";
 import Nav from "@/components/Nav";
-import SuspenseWrapper from "@/components/SuspenseWrapper";
-import Analytics from "@/components/Analytics";
-import Script from "next/script";
+// import SuspenseWrapper from "@/components/SuspenseWrapper";
+// import Analytics from "@/components/Analytics";
+// import Script from "next/script";
+// const GA_TRACKING_ID = "G-222CM8HCHC";
 
 export const metadata = {
     title: "Harsh Priye",
     description: "Harsh Priye's personal website",
 };
 
-const GA_TRACKING_ID = "G-222CM8HCHC";
-
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
                 <link rel="icon" type="image/*" href="/code1.png" />
-                <Script
+                {/* <Script
                     async
                     src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
                     strategy="afterInteractive"
@@ -30,14 +29,14 @@ export default function RootLayout({ children }) {
                             page_path: window.location.pathname,
                         });
                     `}
-                </Script>
+                </Script> */}
             </head>
             <body>
                 {children}
                 <Nav />
-                <SuspenseWrapper>
+                {/* <SuspenseWrapper>
                     <Analytics />
-                </SuspenseWrapper>
+                </SuspenseWrapper> */}
             </body>
         </html>
     );
